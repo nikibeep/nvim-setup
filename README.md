@@ -1,2 +1,2 @@
 # nvim-setup
-my personal neovim setup using lua
+my personal neovim setup for rust using lua
