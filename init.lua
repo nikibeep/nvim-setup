@@ -1,6 +1,16 @@
 -- Ensure packer is loaded
 vim.cmd [[packadd packer.nvim]]
 
+-- Add the local luarocks path to package.path and package.cpath
+local rock_path = '/home/george/.luarocks/share/lua/5.1/?.lua;' ..
+                  '/home/george/.luarocks/share/lua/5.1/?/init.lua'
+local rock_cpath = '/home/george/.luarocks/lib/lua/5.4/?.so;' ..
+                   '/home/george/.luarocks/lib/luarocks/rocks-5.4/?.so'
+
+package.path = package.path .. ';' .. rock_path
+package.cpath = package.cpath .. ';' .. rock_cpath
+
+
 -- Initialize packer and configure plugins
 require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
