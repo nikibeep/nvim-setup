@@ -204,6 +204,9 @@ require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,  -- Enable syntax highlighting
   },
+  fold = {
+    enable = true,
+  },
 }
 
 vim.cmd([[
@@ -315,6 +318,9 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = { "lua", "python", "rust", "cpp", "go", "javascript", "typescript" },
   highlight = { enable = true, additional_vim_regex_highlighting = false },
   indent = { enable = true },
+  fold = {
+    enable = true,
+  },
 }
 
 -- General Neovim settings for Java development
